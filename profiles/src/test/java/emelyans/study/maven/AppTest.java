@@ -1,5 +1,6 @@
 package emelyans.study.maven;
 
+import org.apache.log4j.Logger;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -10,12 +11,14 @@ import org.testng.annotations.Test;
 @Test
 public class AppTest {
 
-    /**
-     * Rigourous Test :-)
-     */
+	final private Logger logger = Logger.getLogger(this.getClass());
+	
+	/**
+	 * Rigourous Test :-)
+	 */
 	@Test
-    public void testApp()
-    {
-        Assert.assertTrue( true );
-    }
+	public void testApp() {
+		logger.debug(System.getProperty("env"));
+		Assert.assertTrue(true);
+	}
 }
